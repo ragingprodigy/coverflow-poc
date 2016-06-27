@@ -15,6 +15,7 @@
 		73461B9B1D05C8A40032E6B7 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73461B9A1D05C8A40032E6B7 /* iCarousel.m */; };
 		73461B9D1D05C9FB0032E6B7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 73461B9C1D05C9FB0032E6B7 /* background.png */; };
 		73461B9F1D05CA0A0032E6B7 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 73461B9E1D05CA0A0032E6B7 /* page.png */; };
+		73BECF261D1DA5C800321E5F /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BECF251D1DA5C800321E5F /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		73461B9A1D05C8A40032E6B7 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		73461B9C1D05C9FB0032E6B7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		73461B9E1D05CA0A0032E6B7 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
+		73BECF251D1DA5C800321E5F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				73461B9A1D05C8A40032E6B7 /* iCarousel.m */,
 				73461B861D05C86B0032E6B7 /* AppDelegate.swift */,
 				73461B881D05C86B0032E6B7 /* ViewController.swift */,
+				73BECF251D1DA5C800321E5F /* MyCollectionViewCell.swift */,
 				73461B8A1D05C86B0032E6B7 /* Main.storyboard */,
 				73461B8D1D05C86B0032E6B7 /* Assets.xcassets */,
 				73461B8F1D05C86B0032E6B7 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			files = (
 				73461B9B1D05C8A40032E6B7 /* iCarousel.m in Sources */,
 				73461B891D05C86B0032E6B7 /* ViewController.swift in Sources */,
+				73BECF261D1DA5C800321E5F /* MyCollectionViewCell.swift in Sources */,
 				73461B871D05C86B0032E6B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +313,7 @@
 				73461B971D05C86B0032E6B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

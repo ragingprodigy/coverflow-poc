@@ -8,15 +8,44 @@
 
 import UIKit
 
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 5
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell: MyCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MY_CELL", forIndexPath: indexPath) as! MyCollectionViewCell
+        
+        
+        cell.dateLabel.text = "\(indexPath.row)"
+        
+        if indexPath.row == self.currentIndex {
+            cell.dateLabel.addBorder(edges: [.All], colour: UIColor.blueColor(), thickness: 1)
+        }
+        
+        return cell
+        
+    }
+    
+}
+
 class ViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
     
     @IBOutlet var carousel: iCarousel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var items:[Int] = []
+    
+    var currentIndex: Int = 0
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        for i in 0...99
+        for i in 0...999
         {
             items.append(i)
         }
@@ -35,13 +64,19 @@ class ViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
 
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        print(items.count)
         return items.count
     }
     
-    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
+    func carouselCurrentItemIndexDidChange(carousel: iCarousel) {
         
-        print("Called...")
+        self.currentIndex = carousel.currentItemIndex
+        self.collectionView.reloadData()
+        
+//        print("\(carousel.currentItemIndex) is now active")
+        
+    }
+    
+    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
         
         var label: UILabel
         var itemView: UIImageView
